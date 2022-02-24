@@ -1,7 +1,7 @@
 # CMPS 2200  Recitation 02
 
-**Name (Team Member 1):**_________________________  
-**Name (Team Member 2):**_________________________
+**Name (Team Member 1):** Jim Haines  
+**Name (Team Member 2):** Lily Yee
 
 In this recitation, we will investigate recurrences. 
 To complete this recitation, follow the instructions in this document. Some of your answers will go in this file, and others will require you to edit `main.py`.
@@ -50,10 +50,36 @@ where $W(1) = 1$.
 
 **TODO: your answer goes here**
 
+assume: n = 10, a = 2, b = 2
+
+f(n) = 1 --> W(n) = 15
+  This function is O(1) 
+
+f(n) = n --> W(n)= 36
+  This funtion is O(n)
+
+f(n) = log(n) (assume log base 10) --> W(n) = 11.602059991327963
+  This function is O(log(n))
+
 - [ ] 5. (4 points) Now that you have a nice way to empirically generate valuess of $W(n)$, we can look at the relationship between $a$, $b$, and $f(n)$. Suppose that $f(n) = n^c$. What is the asypmptotic behavior of $W(n)$ if $c < \log_b a$? What about $c > \log_b a$? And if they are equal? Modify `compare_work` to compare empirical values for different work functions (at several different values of $n$) to justify your answer. 
 
 **TODO: your answer goes here**
 
+When analyzed, n^c when c<log_b(a) and c>log_b(a) seem to have similar runtimes. The asypmptotic behavior seems to be O(log(n))
+
 - [ ] 6. (3 points) $W(n)$ is meant to represent the running time of some recursive algorithm. Suppose we always had $a$ processors available to us and we wanted to compute the span of the same algorithm. Implement the function `span_calc` to compute the empirical span, where the work of the algorithm is given by $W(n)$. Implement `test_compare_span` to create a new comparison function for comparing span functions. Derive the asymptotic expressions for the span of the recurrences you used in problem 4 above. Confirm that everything matches up as it should. 
 
 **TODO: your answer goes here**
+
+assume: n = 10, a = 2, b = 2
+
+f(n) = 1 --> S(n) = 8
+  This function is O(1) 
+
+f(n) = n --> S(n)= 23
+  This funtion is O(n)
+
+f(n) = log(n) (assume log base 10) --> S(n) = 6.301029995663981
+  This function is O(log(n))
+
+
